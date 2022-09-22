@@ -7,14 +7,7 @@ import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/
 import React from 'react';
 import { ColorSchemeName } from 'react-native';
 import { useAppSelector } from 'redux_toolkit/hooks';
-import { AppDispatch } from 'redux_toolkit/store';
-import { UserState } from 'redux_toolkit/UserSlice';
 import RootNavigator from './RootNavigator';
-
-type CheckForPersistingUserArgs = {
-    user: UserState;
-    dispatch: AppDispatch;
-};
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
     const user = useAppSelector((state) => state.user);
