@@ -21,11 +21,7 @@ export default function RootNavigator() {
             }}
         >
             <Stack.Screen name="Root" component={BottomTabNavigator} />
-            <Stack.Screen
-                name="NotFound"
-                component={NotFoundScreen}
-                options={{ title: 'Oops!' }}
-            />
+            <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
             <Stack.Group screenOptions={{ presentation: 'containedModal' }}>
                 <Stack.Screen name="Modal" component={ModalScreen} />
             </Stack.Group>

@@ -3,6 +3,6 @@ export default {
     auth: {
         login: 'Login',
         logout: 'Logout',
-        register: "Register"
-    }
+        register: 'Register',
+    },
 };

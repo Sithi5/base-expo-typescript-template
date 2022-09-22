@@ -7,16 +7,11 @@ import Colors from 'globals/Colors';
 import { HomeScreen } from 'screens';
 import { RootTabParamList } from './types';
 
-
 /**
  * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
  * https://reactnavigation.org/docs/bottom-tab-navigator
  */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
-const icons = {
-    home: require('images/icons/HOME.png'),
-};
-
 
 export default function BottomTabNavigator() {
     const colorScheme = useColorScheme();
@@ -41,5 +36,4 @@ export default function BottomTabNavigator() {
     );
 }
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});

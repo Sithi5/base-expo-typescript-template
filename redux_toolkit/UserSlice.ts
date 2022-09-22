@@ -16,8 +16,7 @@ export const userSlice = createSlice({
             state.logged = action.payload;
         },
     },
-    extraReducers: (builder) => {
-    },
+    extraReducers: (builder) => {},
 });
 
 // Action creators are generated for each case reducer function

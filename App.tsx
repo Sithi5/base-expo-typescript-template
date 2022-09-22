@@ -1,6 +1,7 @@
 import useCachedResources from 'hooks/useCachedResources';
 import useColorScheme from 'hooks/useColorScheme';
 import Navigation from 'navigation';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from 'redux_toolkit/store';
 

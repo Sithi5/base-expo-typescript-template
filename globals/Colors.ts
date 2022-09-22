@@ -6,9 +6,8 @@ export const redColor = 'red';
 export const goldColor = 'gold';
 export const greenColor = 'green';
 
-
-export const primaryColor = greyColor
-export const secondaryColor = greenColor
+export const primaryColor = greyColor;
+export const secondaryColor = greenColor;
 
 const tintColorLight = greyColor;
 const tintColorDark = blackColor;

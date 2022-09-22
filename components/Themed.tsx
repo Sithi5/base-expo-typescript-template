@@ -13,7 +13,7 @@ import {
     ScrollView as DefaultScrollView,
     Text as DefaultText,
     TextInput as DefaultTextInput,
-    View as DefaultView
+    View as DefaultView,
 } from 'react-native';
 
 export function useThemeColor(
@@ -39,8 +39,7 @@ export type TextProps = ThemeProps & DefaultText['props'];
 export type ViewProps = ThemeProps & DefaultView['props'];
 export type TextInputProps = ThemeProps & DefaultTextInput['props'];
 export type ActivityIndicator = ThemeProps & DefaultActivityIndicator['props'];
-export type KeyboardAvoidingViewProps = ThemeProps &
-    DefaultKeyboardAvoidingView['props'];
+export type KeyboardAvoidingViewProps = ThemeProps & DefaultKeyboardAvoidingView['props'];
 export type SafeAreaViewProps = ThemeProps & DefaultSafeAreaView['props'];
 export type ScrollViewProps = ThemeProps & DefaultScrollView['props'];
 
@@ -53,60 +52,35 @@ export function Text(props: TextProps) {
 
 export function View(props: ViewProps) {
     const { style, lightColor, darkColor, ...otherProps } = props;
-    const backgroundColor = useThemeColor(
-        { light: lightColor, dark: darkColor },
-        'background'
-    );
+    const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
 
     return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
 
 export function TextInput(props: TextInputProps) {
     const { style, lightColor, darkColor, ...otherProps } = props;
-    const color = useThemeColor(
-        { light: lightColor, dark: darkColor },
-        'textInput'
-    );
+    const color = useThemeColor({ light: lightColor, dark: darkColor }, 'textInput');
 
     return <DefaultTextInput style={[{ color }, style]} {...otherProps} />;
 }
 
 export function ActivityIndicator(props: ActivityIndicator) {
     const { lightColor, darkColor, ...otherProps } = props;
-    const Color = useThemeColor(
-        { light: lightColor, dark: darkColor },
-        'activityIndicator'
-    );
+    const Color = useThemeColor({ light: lightColor, dark: darkColor }, 'activityIndicator');
 
     return <DefaultActivityIndicator color={Color} {...otherProps} />;
 }
 
 export function SafeAreaView(props: SafeAreaViewProps) {
     const { style, lightColor, darkColor, ...otherProps } = props;
-    const backgroundColor = useThemeColor(
-        { light: lightColor, dark: darkColor },
-        'background'
-    );
+    const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
 
-    return (
-        <DefaultSafeAreaView
-            style={[{ backgroundColor }, style]}
-            {...otherProps}
-        />
-    );
+    return <DefaultSafeAreaView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
 
 export function ScrollView(props: ScrollViewProps) {
     const { style, lightColor, darkColor, ...otherProps } = props;
-    const backgroundColor = useThemeColor(
-        { light: lightColor, dark: darkColor },
-        'background'
-    );
+    const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
 
-    return (
-        <DefaultScrollView
-            style={[{ backgroundColor }, style]}
-            {...otherProps}
-        />
-    );
+    return <DefaultScrollView style={[{ backgroundColor }, style]} {...otherProps} />;
 }

@@ -14,7 +14,7 @@
     "target": "esnext",
     "baseUrl": "."
   },
-  "typeRoots": ["./declarations"],
+  "typeRoots": ["./types"],
   "exclude": [
     "node_modules",
     "babel.config.js",

@@ -353,10 +353,4 @@ const globalStyles = StyleSheet.create({
     ...lighTextStyles,
 });
 
-export {
-    globalStyles,
-    defaultMargin,
-    defaultPadding,
-    defaultBorderRadius,
-    regularFont,
-};
+export { globalStyles, defaultMargin, defaultPadding, defaultBorderRadius, regularFont };

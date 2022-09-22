@@ -1,8 +1,7 @@
 export default {
     expo: {
         name: 'Sithi5BaseExpoTemplate',
-        description:
-            'A basic expo template using typescript.',
+        description: 'A basic expo template using typescript.',
         slug: 'Sithi5BaseExpoTemplate',
         version: '1.0.0',
         orientation: 'portrait',
@@ -33,6 +32,7 @@ export default {
         web: {
             favicon: './assets/images/favicon.png',
         },
-        owner: 'Sithi5',
+        typeRoots: ['./types'],
+        owner: 'Sithis',
     },
 };
