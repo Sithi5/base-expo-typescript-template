@@ -5,18 +5,6 @@ module.exports = function (api) {
         presets: ['module:metro-react-native-babel-preset'],
         plugins: [
             [
-                'module:react-native-dotenv',
-                {
-                    envName: 'APP_ENV',
-                    moduleName: '@env',
-                    path: '.env',
-                    blocklist: null,
-                    allowlist: null,
-                    safe: false,
-                    allowUndefined: true,
-                },
-            ],
-            [
                 'module-resolver',
                 {
                     alias: {
@@ -26,8 +14,10 @@ module.exports = function (api) {
                         screens: './screens',
                         hooks: './hooks',
                         redux_toolkit: './redux_toolkit',
+                        config: './config',
                         api: './api',
                         utils: './utils',
+                        types: './types',
                         languages: './languages',
                     },
                     root: ['.'],
